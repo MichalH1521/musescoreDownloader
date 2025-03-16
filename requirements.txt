@@ -1,0 +1,11 @@
+flask
+flask-cors
+flask-wtf
+gunicorn
+selenium
+webdriver-manager
+beautifulsoup4
+requests
+svglib
+reportlab
+pypdf2

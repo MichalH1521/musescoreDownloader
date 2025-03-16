@@ -1,0 +1,9 @@
+venv/
+ResultPDFs/
+__pycache__/
+*.pyc
+*.pyo
+*.log
+.env
+.git
+.dockerignore
