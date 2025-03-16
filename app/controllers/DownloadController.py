@@ -63,7 +63,7 @@ def get_notesheet_pdf(url):
     driver.get(url)
     wait = WebDriverWait(driver, 2)
 
-    with open("raw.html", "w") as f:
+    with open("raw.html", "w", encoding="utf-8") as f:
         f.write(driver.page_source)
 
     title = slugify(driver.find_element(By.CSS_SELECTOR, ".nFRPI.V4kyC.z85vg.N30cN").text)
@@ -76,7 +76,7 @@ def get_notesheet_pdf(url):
 
     driver.quit()
 
-    os.mkdir(svg_folder)
+    os.makedirs(svg_folder, exist_ok=True)
     os.makedirs(pdf_folder, exist_ok=True)
     os.makedirs("./ResultPDFs", exist_ok=True)
 

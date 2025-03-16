@@ -9,3 +9,4 @@ requests
 svglib
 reportlab
 pypdf2
+python-dotenv

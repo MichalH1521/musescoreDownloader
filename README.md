@@ -21,7 +21,7 @@ Ensure you have the following installed:
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/yourusername/musescore-downloader.git
+git clone https://github.com/MichalH1521/musescoreDownloader.git
 cd musescore-downloader
 ```
 

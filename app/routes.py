@@ -4,6 +4,11 @@ import os
 
 main = Blueprint('main', __name__)
 
+@main.route('/favicon.ico')
+def favicon():
+    return send_from_directory('static', 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
+
 @main.route('/')
 def home():
     return render_template('home.html')
@@ -12,9 +17,11 @@ def home():
 def get_notesheet():
     url = request.form.get('url')
     pdf = dc.get_notesheet_pdf(url)
-    print(pdf)
     return render_template("download.html", pdf_filename=pdf)
 
+@main.route("/download")
+def return_view():
+    return render_template("download.html")
 @main.route("/download/<filename>")
 def serve_pdf(filename):
     return send_from_directory(F"{os.getcwd()}/ResultPDFs", filename, as_attachment=True)
