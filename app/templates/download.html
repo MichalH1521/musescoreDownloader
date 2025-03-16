@@ -28,7 +28,7 @@
             <h4>Your download should start soon...</h4>
             <p>If it doesn't, <a href="{{ url_for('main.serve_pdf', filename=pdf_filename) }}" class="text-primary fw-bold">click here</a>.</p>
 
-            <a class="btn btn-primary">Download another notesheet</a>
+            <a class="btn btn-primary" href="{{ url_for('main.home') }}">Download another notesheet</a>
         </div>
         
     </div>

@@ -19,9 +19,6 @@ def get_notesheet():
     pdf = dc.get_notesheet_pdf(url)
     return render_template("download.html", pdf_filename=pdf)
 
-@main.route("/download")
-def return_view():
-    return render_template("download.html")
 @main.route("/download/<filename>")
 def serve_pdf(filename):
     return send_from_directory(F"{os.getcwd()}/ResultPDFs", filename, as_attachment=True)
