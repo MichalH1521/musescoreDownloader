@@ -70,35 +70,4 @@ To configure the app, create a `.env` file:
 ```
 FLASK_APP=run.py
 FLASK_ENV=production
-CHROMEDRIVER_PATH=/usr/bin/chromedriver
 ```
-
----
-
-## ❓ Troubleshooting
-**1. Selenium WebDriver Issues**
-   - Ensure you have **Google Chrome** installed.
-   - Verify that the **chromedriver** version matches your Chrome version.
-   - If running in Docker, install Chromium and the correct driver inside the container.
-
-**2. File Permission Issues**
-   - Ensure the application has write permissions to save generated PDFs.
-
-**3. "No Such Element" Error in Docker**
-   - Increase wait times (`WebDriverWait`) to allow elements to load.
-   - Run Chrome with `--no-sandbox` and `--disable-dev-shm-usage` flags.
-
----
-
-## 🤝 Contributing
-Pull requests are welcome! Please follow best practices and open an issue for discussion before making changes.
-
----
-
-## 📜 License
-This project is licensed under the MIT License.
-
----
-
-### 🎵 Happy Downloading! 🎶
-
