@@ -93,6 +93,7 @@ def get_notesheet_pdf(url):
             f.write(data.content)
 
     # Convert SVG files to PDF files
+    # Possible bottleneck - try different approach
     pdf_files = []
     for i, filename in enumerate(sorted(os.listdir(svg_folder))):
         if filename.endswith(".svg"):
